@@ -10,8 +10,9 @@ where translated not like 'mymemory warning%'				--Do not want to include tweets
 )
 
 select 
-		 avg(sentiment)				-- taking an average of sentiment score per hour
+		 avg(sentiment)	SentimentScore			-- taking an average of sentiment score per hour
 		,TimeHour
 
 from cte
 group by TimeHour
+
